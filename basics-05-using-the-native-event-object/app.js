@@ -5,6 +5,13 @@ const app = Vue.createApp({
       name: "",
     };
   },
+  computed: {
+    // we are going to use it as a data property
+    fullName() {
+      alert("Running again...");
+      return this.name === "" ? "" : this.name + " " + "Khan";
+    },
+  },
   methods: {
     outputFullName() {
       return this.name === "" ? "" : this.name + " " + "Khan";
