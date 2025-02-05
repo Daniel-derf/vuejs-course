@@ -8,6 +8,11 @@ const app = Vue.createApp({
     };
   },
   watch: {
+    counter(value) {
+      if (value > 50) {
+        this.counter = 0;
+      }
+    },
     // watch property is used to watch the data property
     // and it will be executed whenever the data property changes
     name(value) {
