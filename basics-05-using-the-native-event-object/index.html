@@ -23,8 +23,9 @@
       <p>Result: {{ counter }}</p>
       <!-- v-model is just a shortcut for v-bind:value and v-on:input -->
       <input type="text" v-model="name" />
+      <input type="text" v-model="lastName" />
       <button @click="resetInput">Reset Input</button>
-      <p>Your Name: {{ fullName }}</p>
+      <p>Your Name: {{ fullname }}</p>
     </section>
   </body>
 </html>

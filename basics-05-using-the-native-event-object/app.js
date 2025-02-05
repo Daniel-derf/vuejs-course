@@ -3,13 +3,35 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      fullname: "",
+      lastName: "",
     };
+  },
+  watch: {
+    // watch property is used to watch the data property
+    // and it will be executed whenever the data property changes
+    name(value) {
+      if (value === "") {
+        this.fullname = "";
+        return;
+      }
+
+      this.fullname = value + " " + "Khan";
+    },
+    lastName(value) {
+      if (value === "") {
+        this.fullname = "";
+        return;
+      }
+
+      this.fullname = this.name + " " + value;
+    },
   },
   computed: {
     // we are going to use it as a data property
-    fullName() {
-      return this.name === "" ? "" : this.name + " " + "Khan";
-    },
+    // fullName() {
+    //   return this.name === "" ? "" : this.name + " " + "Khan";
+    // },
   },
   methods: {
     outputFullName() {
