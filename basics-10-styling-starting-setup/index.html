@@ -18,14 +18,17 @@
     </header>
     <section id="styling">
       <div
-        :class="{demo: true, active: boxASelected}"
+        class="demo"
+        :class="{active: boxASelected}"
         @click="boxSelected('A')"
       ></div>
       <div
+        class="demo"
         :class="{demo: true, active: boxBSelected}"
         @click="boxSelected('B')"
       ></div>
       <div
+        class="demo"
         :class="{demo: true, active: boxCSelected}"
         @click="boxSelected('C')"
       ></div>
