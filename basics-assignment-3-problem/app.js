@@ -24,12 +24,10 @@ const app = Vue.createApp({
     },
   },
   watch: {
-    result(value) {
-      if (value !== "") {
-        setTimeout(() => {
-          this.number = 0;
-        }, 5000);
-      }
+    result() {
+      setTimeout(() => {
+        this.number = 0;
+      }, 5000);
     },
   },
 });
