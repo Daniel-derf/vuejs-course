@@ -19,7 +19,7 @@
       <button @click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul v-if="goals.length > 0">
-        <li v-for="goal in goals">{{ goal }}</li>
+        <li v-for="(goal, idx) in goals">{{ goal }} - {{ idx }}</li>
       </ul>
     </section>
   </body>
